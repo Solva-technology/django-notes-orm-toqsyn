@@ -42,35 +42,16 @@ docker-compose up -d --build
 После запуска:
 
 Главная страница доступен по адресу: http://localhost:8000
+
 Пользователи: http://localhost:8000/users/
+
 Информаця про пользователя(вместо 1 пишите id): http://localhost:8000/users/1
+
 Детали записки(вместо 1 пишите id): http://localhost:8000/notes/1/
+
 Панель админ: http://localhost:8000/admin
 
 База данных PostgreSQL работает внутри контейнера db.
-
-4. Применение миграций
-```bash
-docker-compose exec web python manage.py makemigrations
-docker-compose exec web python manage.py migrate
-```
-4. Создание администратора
-```bash
-docker-compose exec web python manage.py createsuperuser
-```
-Придумайте пароль и логин
-Панель администратора доступен по адресу http://localhost:8000/admin
-
-⚙️ Структура моделей
-User — имя, email
-
-UserProfile — OneToOne с User: bio, дата рождения
-
-Note — текст, дата создания, author (FK), status (FK), categories (M2M)
-
-Status — имя, is_final
-
-Category — заголовок, описание
 
 📁 Структура проекта
 ```bash
