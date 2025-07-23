@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ note.text }} {% endblock %}
+{%block header%} Записки пользователя {{note.author.name}}{%endblock%}
+{% block content %}
+    <h2>{{ note.text }}</h2>
+    <p>Автор: {{ note.author.name }}</p>
+    <p>Почта: {{ note.author.email }}</p>
+    <p>Биография: {{ note.author.userprofile.bio }}</p>
+    <p>Дата рождения: {{ note.author.userprofile.birth_date }}</p>
+    <p>Статус: {{ note.status.name }}{% if note.status.is_final %} Финальный {% endif %}</p>
+    <p>Категории: {{ note.categories.all|join:", " }}</p>
+{% endblock %}
