@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ user_profile.user.name }} {% endblock %}
+{% block header %} Пользователь {{ user_profile.user.name }} {% endblock %}
+{% block content %}
+    <p>Email: {{ user_profile.user.email }}</p>
+    <p>Биография: {{ user_profile.bio }}</p>
+    <p>Дата рождения: {{ user_profile.birth_date }}</p>
+    <ul>
+            {% for note in user_profile.user.notes.all %}
+            <li>
+                <a href="{% url 'note_detail' note.id %}">{{ note.text }}</a>
+                <p>Статус: {{ note.status.name }}{% if note.status.is_final %} Финальный {% endif %}</p>
+            </li>
+            {% endfor %}
+            {% if not user_profile.user.notes %}
+                <li>Нет записок.</li>
+            {% endif %}
+    </ul>
+{% endblock %}
