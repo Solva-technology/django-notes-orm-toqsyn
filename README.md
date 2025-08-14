@@ -19,7 +19,8 @@
 ### 1. Клонируй репозиторий и перейди в директорию
 
 ```bash
-git clone https://github.com/Solva-technology/solva-notes-models-toqsyn.git
+git clone https://github.com/Solva-technology/django-notes-orm-toqsyn.git
+cd django-notes-orm-toqsyn
 cd db_django
 ```
 2. Создай .env файл в корне проекта:
@@ -30,7 +31,8 @@ POSTGRES_PASSWORD=db_password
 DB_HOST=db
 DB_PORT=5432
 DJANGO_SECRET_KEY = 'django-insecure-gx=r9g%%7_lb11*a@j5z3&z(!*)&q($5vax77k-fw2!rq97j3m'
-
+DJANGO_DEBUG=True
+DJANGO_ALLOWED_HOSTS=*
 
 LANGUAGE_CODE=ru
 TIME_ZONE=Asia/Almaty
@@ -39,7 +41,16 @@ TIME_ZONE=Asia/Almaty
 ```bash
 docker-compose up -d --build
 ```
+выполни миграций
+```bash
+docker-compose exec web python manage.py migrate
+```
+создай админа
+```bash
+docker-compose exec web python manage.py createsuperuser
+```
 После запуска:
+
 
 Главная страница доступен по адресу: http://localhost:8000
 

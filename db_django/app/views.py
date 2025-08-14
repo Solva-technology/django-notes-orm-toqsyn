@@ -28,7 +28,7 @@ def note_detail(request, note_id):
 
 def user_detail(request, user_id):
     template_name = 'user_detail.html'
-    user_profile = get_object_or_404(UserProfile, id=user_id)
+    user_profile = get_object_or_404(UserProfile, user__id=user_id)
     context = {
         'user_profile': user_profile,
     }
@@ -39,7 +39,6 @@ def users_list(request):
     template_name = 'users_list.html'
     users = (
         UserProfile.objects.select_related('user')
-        .values('user__id', 'user__name', 'bio', 'birth_date')
     )
     context = {
         'users': users,

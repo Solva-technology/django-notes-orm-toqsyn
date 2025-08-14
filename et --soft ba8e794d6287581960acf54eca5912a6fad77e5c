@@ -1,0 +1,47 @@
+[33mcommit 90810379936a5b277b3b4f06a7cf1ae98b269ce3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Laboratory 20 <lab20@solab.kz>
+Date:   Thu Aug 14 13:26:35 2025 +0500
+
+    вроде окончательный коммит) исправил по ревью
+
+[33mcommit b39a23415575f722c81a437fdb67ce1debbe205b[m
+Author: Laboratory 20 <lab20@solab.kz>
+Date:   Thu Aug 14 11:15:17 2025 +0500
+
+    исправил по ревью
+
+[33mcommit ba8e794d6287581960acf54eca5912a6fad77e5c[m
+Author: Laboratory 20 <lab20@solab.kz>
+Date:   Wed Jul 23 11:19:00 2025 +0500
+
+    changed readme
+
+[33mcommit 06a2b2a829a091d7a5f785e526867b0c48b94dbe[m
+Author: Laboratory 20 <lab20@solab.kz>
+Date:   Wed Jul 23 11:07:04 2025 +0500
+
+    second
+
+[33mcommit c1498c265364fb6265c83bd6b0f63ca90b815160[m
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Wed Jul 16 04:38:45 2025 +0000
+
+    add online IDE url
+
+[33mcommit f8aa1c867b6d8de461e1b8e746349556c5ce39db[m
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Wed Jul 16 04:38:43 2025 +0000
+
+    Setting up GitHub Classroom Feedback
+
+[33mcommit 14900fac5b84d11bb58535b25bc5a0ad3f9c052e[m[33m ([m[1;31morigin/feedback[m[33m)[m
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Wed Jul 16 04:38:43 2025 +0000
+
+    GitHub Classroom Feedback
+
+[33mcommit 34197f277a1caa9c723d9ab2972b0e3fdf10e0a3[m
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Tue Jul 15 09:24:38 2025 +0000
+
+    Initial commit
