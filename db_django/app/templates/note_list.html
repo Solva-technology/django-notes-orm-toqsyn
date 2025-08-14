@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Список записок{% endblock %}
+{% block header %} Список заметок    {% endblock %}
+
+{% block content %}
+
+<ul>
+    {% for note in notes %}
+        <li>
+            <a href="{% url 'note_detail' note.id %}">
+                {{ note }}:
+            </a>
+            <div>
+                <strong>Текст:</strong> {{ note.text|truncatechars:100 }}<br>
+                <strong>Автор:</strong> {{ note.author.name }}<br>
+                <strong>Создано:</strong> {{ note.created_at|date:"d.m.Y H:i" }}<br>
+                <strong>Статус:</strong> {{ note.status }}<br>
+                <strong>Категории:</strong>
+                {% for category in note.categories.all %}
+                    {{ category.title }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </div>
+        </li>
+    {% empty %}
+        <li>Нет записок.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
